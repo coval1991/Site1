@@ -18,15 +18,15 @@ import FAQPage from './pages/FAQPage';
 const projectId = '90d1b38d3f88cd5cd21dece9823faa08';
 
 // 2. Set chains
-const polygonAmoy = {
-  chainId: 80002,
-  name: 'Polygon Amoy',
+const polygonMainnet = {
+  chainId: 137, // ID da mainnet do Polygon
+  name: 'Polygon Mainnet',
   currency: 'MATIC',
-  explorerUrl: 'https://amoy.polygonscan.com',
-  rpcUrl: 'https://rpc-amoy.polygon.technology',
+  explorerUrl: 'https://polygonscan.com',
+  rpcUrl: 'https://rpc.ankr.com/polygon', // ou https://polygon-rpc.com
 };
 
-const chains = [polygonAmoy];
+const chains = [polygonMainnet];
 
 // 3. Create a metadata object
 const metadata = {
@@ -39,8 +39,8 @@ const metadata = {
 // 4. Create Ethers config
 const ethersConfig = defaultConfig({
   metadata,
-  defaultChainId: 80002,
-  rpcUrl: 'https://rpc-amoy.polygon.technology',
+  defaultChainId: 137, // Mainnet Polygon
+  rpcUrl: 'https://rpc.ankr.com/polygon', // ou https://polygon-rpc.com
   optionalMethods: ['eth_signTypedData', 'eth_signTypedData_v4', 'eth_accounts'],
 });
 
