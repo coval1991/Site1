@@ -1,5 +1,5 @@
 const { ethers } = require("ethers");
-const { CFD_TOKEN_ABI, AFFILIATE_MANAGER_ABI, ICO_PHASE1_ABI, USDT_ABI } = require("../contracts/abis");
+const { CFD_TOKEN_ABI, AFFILIATE_MANAGER_ABI, ICO_ABI, USDT_ABI } = require("../contracts/abis");
 
 class BlockchainService {
   constructor() {
@@ -50,7 +50,7 @@ class BlockchainService {
 
     this.icoPhase1Contract = new ethers.Contract(
       ICO_PHASE1_ADDRESS,
-      ICO_PHASE1_ABI,
+      ICO_ABI,
       this.provider
     );
 
